@@ -6,4 +6,36 @@ body{
 .mikbild{
     height: 350px;
     width: auto;
+
+    /* Initial value for rotate is needed for transition to work */
+    transform:rotate(0);  
+  
+    /* CSS transition creates smooth effect */
+    transition:all 1.5s;
 }
+
+#mikbilddiv{
+    height: 350px;
+    width: 467px;
+    margin: 0;
+
+    /* Initial value for rotate is needed for transition to work */
+    transform:rotate(0);  
+  
+    /* CSS transition creates smooth effect */
+    transition:all 1.5s;
+}
+
+
+#needle {
+    height:5px;
+    background-color: white;
+    width:100px;
+    margin-top:100px;
+  
+    /* Initial value for rotate is needed for transition to work */
+    transform:rotate(0);  
+  
+    /* CSS transition creates smooth effect */
+    transition:all 1.5s;
+  }
