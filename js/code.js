@@ -14,14 +14,40 @@ btn.addEventListener("click", start_animation);
 var lastAngle = "";
 
 
-function start_animation(){ 
-// Update the total angle needed
-lastAngle = +lastAngle + +input.value;
+function start_animation() {
+    // Update the total angle needed
+    lastAngle = +lastAngle + +input.value;
 
-// For testing:
-console.clear()
-console.log("Current total angle: " + lastAngle);
+    // For testing:
+    console.clear()
+    console.log("Current total angle: " + lastAngle);
 
-// Move the needle:
-needle.style.transform = "rotate(" + lastAngle + "deg)";
+    // Move the needle:
+    needle.style.transform = "rotate(" + lastAngle + "deg)";
 }
+
+let darkMode = localStorage.getItem("darkMode");
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+
+const enableDarkMode = () => {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("darkMode", "enabled");
+}
+
+const disableDarkMode = () => {
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("darkMode", null);
+}
+
+if (darkMode === "enabled") {
+    enableDarkMode();
+}
+
+darkModeToggle.addEventListener("click", () => {
+    darkMode = localStorage.getItem("darkMode");
+    if (darkMode !== null) {
+        disableDarkMode();
+    } else {
+        enableDarkMode();
+    }
+});

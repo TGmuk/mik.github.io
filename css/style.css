@@ -1,7 +1,21 @@
 
-body{
-    background-color: rgb(98, 98, 98);
-}
+body {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  h1, h2, h3 {
+    color: #000;
+  }
+  
+  .darkMode {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .darkMode h1, .darkMode h2, .darkMode h3 {
+    color: #fff;
+  }
 
 .mikbild{
     height: 350px;
